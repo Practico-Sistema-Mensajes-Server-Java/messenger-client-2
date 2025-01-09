@@ -35,8 +35,8 @@ services:
     entrypoint:
       [
         "./wait-for-it.sh", "eureka-server:8761", "-t", "60", "--",
-        "./wait-for-it.sh", "mysql-messenger-client-1:3306", "-t", "60", "--",
-        "java", "-jar", "/app/messenger-client-1.jar"
+        "./wait-for-it.sh", "mysql-messenger-client-2:3306", "-t", "60", "--",
+        "java", "-jar", "/app/messenger-client-2.jar"
       ]
 
 networks:
